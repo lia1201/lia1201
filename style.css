@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import './anims.css';
+
+:root {
+    font-size: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    transform: none;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1e1e1e;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+#particle_background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1e1e1e;
+    z-index: -1;
+}
+
+.pages {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+section.pages__page {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.page__1 {
+    padding: 10% 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.page__profile {
+    width: 50vw;
+    height: 200px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#github_av {
+    margin-bottom: 2em;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+
+.page__1 span {
+    left: 50%;
+    top: calc(100% - 50px);
+    transform: translate(-50%, -100%);
+    font-size: 10rem;
+    opacity: 75%;
+    position: absolute;
+    animation-name: scrollDown;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    user-select: none;
+    cursor: pointer;
+}
+
+.page__2 {
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+.page__2 h1 {
+    margin-top: 5%;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.page__2 h1::after {
+    left: 0;
+    top: 100%;
+    transform: translate(0, -100%);
+    width: 80vw;
+    height: 1px;
+    background-image: linear-gradient(to right, #fff 0%, #fff 75%, rgba(0, 0, 0, 0) 100%);
+    content: '';
+    position: absolute;
+}
+
+.page__2 p {
+    margin-bottom: 50px;
+}
+
+.skillset {
+    padding: 25px;
+    width: 100%;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.skillset ul {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
